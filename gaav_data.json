@@ -1,1 +1,40 @@
-
+{
+  "village_name": "Bharakhara",
+  "district": "Buxar",
+  "block": "Rajpur",
+  "panchayat": "Banni",
+  "total_population": 2200,
+  "interest_fields": [
+    "Agriculture",
+    "Government Jobs",
+    "Computer Education",
+    "Mobile Repairing",
+    "Tailoring",
+    "Driving"
+  ],
+  "top_income_sources": [
+    {
+      "source": "Farming",
+      "percentage": 45
+    },
+    {
+      "source": "Private Jobs (Delhi/Surat)",
+      "percentage": 30
+    },
+    {
+      "source": "Government Schemes",
+      "percentage": 15
+    },
+    {
+      "source": "Local Business",
+      "percentage": 10
+    }
+  ],
+  "trending_searches": [
+    "Bihar Police Vacancy 2025",
+    "Free Silai Training",
+    "Kaise mobile repair sikhe",
+    "PM Kisan Samman Nidhi Yojana",
+    "Computer course near me"
+  ]
+}
