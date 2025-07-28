@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import json
 from emotion_model import predict_emotion
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # गाँव का data load करना (JSON file से)
 with open('gaav_data.json', 'r', encoding='utf-8') as f:
@@ -21,5 +21,5 @@ def analyze_emotion():
     emotion = predict_emotion(text)
     return jsonify({'emotion': emotion})
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
