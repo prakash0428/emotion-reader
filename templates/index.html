@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Reader - Bharakhara</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
 
+<header>
+    <h1>Emotion Reader App</h1>
+    <p>गांव: Bharakhara | जिला: Buxar | पंचायत: Banni</p>
+</header>
+
+<div class="container">
+    <h2>आपका मन कैसा है? 🤔</h2>
+    <textarea id="userText" placeholder="यहां अपना मन की बात लिखिए..."></textarea>
+    <button onclick="analyzeEmotion()">भावना पता करें</button>
+
+    <div class="result-box" id="result"></div>
+
+    <h2>गांव में सबसे ज्यादा रूचि:</h2>
+    <ul>
+        {% for interest in data.interest_fields %}
+            <li>{{ interest }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>मुख्य आय के स्रोत:</h2>
+    <ul>
+        {% for source in data.top_income_sources %}
+            <li>{{ source.source }} - {{ source.percentage }}%</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Google पर सबसे ज्यादा खोज:</h2>
+    <ul>
+        {% for search in data.trending_searches %}
+            <li>{{ search }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
